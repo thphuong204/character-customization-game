@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+body{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background-color:rgb(255,255,238);
+}
+#root {
+    width: 100%;
+    min-width: 600px;
+    height: 100%;
+    min-height: 600px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title */
+#title {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0s;
+    border-bottom: solid 5px rgba(153,204,0,1);
+    align-content: center;
+    margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#title>.line1{
+    width: 100%;
+    font-size:40px;
+    color:rgba(153,204,0,1);
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#title>.line1>span{
+    position: absolute;
+    left: -25%;
+    right:-25%;
+    width: 75%;
+    height: 100%;
+    background: 
+    radial-gradient(
+        circle,
+        white,
+        transparent 25%
+    ) center / 12.5%,
+    radial-gradient(
+        circle,
+        transparent,
+        black 25%
+    ) center / 12.5%;
+    animation: light 4s infinite;
+    mix-blend-mode: color-dodge;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes light {
+    to {
+        transform: translate(50%, 0);
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#title>.line2{
+    width: 100%;
+    font-size:30px;
+    color:rgba(255,187,51,1);
+}
+
+/* Content */
+#content {
+    width: 100%;
+    min-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#content>.avatar-group{
+    display: inline-block;
+    position: sticky;
+    box-sizing: border-box;
+    width: 370px;
+    height: 410px;
+    top: 100px;
+    padding: 50px;
+    border: solid 10px rgba(255,187,51,1);
+    border-radius: 20px;
+    margin: 50px;
+    z-index: 11;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#content>.avatar-group>.avatar {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 280px;
+    margin-bottom: 10px;
+}
+
+#content>.avatar-group>.avatar>img{
+    position: absolute;
+    width: 250px;
+    height: 270px;
+}
+
+#content>.avatar-group>.button {
+    text-align: center;
+}
+
+#content>.avatar-group button {
+    height: 30px;
+    border-radius:10px ;
+}
+
+#content>#parts {
+    width: max(50%,400px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content>#parts>.part-section {
+    width: 100%;
+    margin: 20px;
+}
+
+#content>#parts>.part-section>.part-header {
+    width:100%;
+    text-align: center;
+    color:rgba(0,77,77,1);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#content>#parts>.part-section>.part-list{
+    width:100%;
+    border: solid 5px rgba(0,77,77,0.5);
+    background-color:  rgba(0,77,77,0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#content>#parts>.part-section>.part-list>.part-square {
+width: 50px;
+height: 50px;
+border: solid 1px rgba(0,77,77,0.5);
+border-radius: 10px;
+margin: 10px 10px;
 }
