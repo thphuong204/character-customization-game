@@ -1,12 +1,11 @@
 import React from 'react';
-import { sectionName } from './PartList';
 
 
 
 
 function AvatarBody({ avatarSrc }) {
     // if (sectionName === "Body") {
-    return (<img id="avtBody" src=" ../images/body/17.png" alt="Why" style={{ zIndex: "1" }} />)
+    return (<img id="avtBody" src={avatarSrc} alt="Why" style={{ zIndex: "1" }} />)
     // }
 }
 

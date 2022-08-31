@@ -16,6 +16,10 @@ function App() {
   const [mouthSrc, setMouthSrc] = useState("");
   const [neckwearSrc, setNeckwearSrc] = useState("");
 
+  const onChangeBody = (bodyURL) => {
+    setBodySrc(bodyURL);
+  }
+
   return (
     <>
       <div id="title">
@@ -25,8 +29,8 @@ function App() {
         <div className="line2">👗 👒 👜 🎀 Customization 🧢 👖 👔 👞 </div>
       </div>
       <div id="content">
-        <Avatar />
-        <PartList /*Render list of selection parts*/ />
+        <Avatar bodySrc={bodySrc} />
+        <PartList onChangeBody={onChangeBody}/*Render list of selection parts*/ />
       </div>
     </>
   );
