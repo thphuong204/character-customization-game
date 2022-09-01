@@ -9,115 +9,42 @@ import { hats } from '../configs/partListHats';
 import { glasses } from '../configs/partListGlasses';
 import { neckwear } from '../configs/partListNeckwear';
 
-
-//create PartRender to use for PartList
-function PartRender({ source, onSourceChange }) {
+function PartList({ onChangePart }) {
     return (
-        <img className="part-square" src={source} alt="Img can't be seen" onClick={() => onSourceChange()}></img>
+        <div id="parts">
+            {partSection("Body", body, onChangePart)}
+            {partSection("Hair", hair, onChangePart)}
+            {partSection("Mouth", mouths, onChangePart)}
+            {partSection("Eyes", eyes, onChangePart)}
+            {partSection("Eyebrows", eyebrows, onChangePart)}
+            {partSection("Clothing 1", clothing1, onChangePart)}
+            {partSection("Clothing 2", clothing2, onChangePart)}
+            {partSection("Clothing 3", clothing3, onChangePart)}
+            {partSection("Hat", hats, onChangePart)}
+            {partSection("Glasses", glasses, onChangePart)}
+            {partSection("Neckwear", neckwear, onChangePart)}
+        </div>
     )
 }
 
-
-function PartList({ onChangePart }) {
-
+// create partSection for declutterations
+function partSection(partName, partArr, onChangePart) {
     return (
-        <div id="parts">
-            <div className="part-section">
-                <div className="part-header">Body</div>
-                <div className="part-list">
-                    {body.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
+        <div className="part-section">
+            <div className="part-header">{partName}</div>
+            <div className="part-list">
+                {partArr.map((obj) => (
+                    <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
+                ))}
             </div>
-            <div className="part-section">
-                <div className="part-header">Eyes</div>
-                <div className="part-list">
-                    {eyes.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-            <div className="part-section">
-                <div className="part-header">Hair</div>
-                <div className="part-list">
-                    {hair.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-            <div className="part-section">
-                <div className="part-header">Mouth</div>
-                <div className="part-list">
-                    {mouths.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Eyebrows</div>
-                <div className="part-list">
-                    {eyebrows.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Clothing 1</div>
-                <div className="part-list">
-                    {clothing1.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-            <div className="part-section">
-                <div className="part-header">Clothing 2</div>
-                <div className="part-list">
-                    {clothing2.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Clothing 3</div>
-                <div className="part-list">
-                    {clothing3.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Hat</div>
-                <div className="part-list">
-                    {hats.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Glasses</div>
-                <div className="part-list">
-                    {glasses.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
-            <div className="part-section">
-                <div className="part-header">Neckwear</div>
-                <div className="part-list">
-                    {neckwear.map((obj) => (
-                        <PartRender key={obj} source={obj} onSourceChange={() => onChangePart(obj)} />
-                    ))}
-                </div>
-            </div>
-
         </div>
+    )
+}
+
+//create PartRender to use in PartSection
+function PartRender({ source, onSourceChange }) {
+    return (
+        <img className="part-square" src={source} alt="Img can't be seen" onClick={() => onSourceChange()}></img>
     )
 }
 
