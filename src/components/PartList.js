@@ -17,9 +17,9 @@ function PartList({ onChangePart }) {
             {partSection("Mouth", mouthsSrcUrlArray, onChangePart)}
             {partSection("Eyes", eyesSrcUrlArray, onChangePart)}
             {partSection("Eyebrows", eyebrowsSrcUrlArray, onChangePart)}
-            {partSection("Clothing 1", clothingInnerSrcUrlArray, onChangePart)}
-            {partSection("Clothing 2", clothingOuterSrcUrlArray, onChangePart)}
-            {partSection("Clothing 3", clothingExtraComponentSrcUrlArray, onChangePart)}
+            {partSection("Inner Clothing", clothingInnerSrcUrlArray, onChangePart)}
+            {partSection("Outer Clothing", clothingOuterSrcUrlArray, onChangePart)}
+            {partSection("Extra Component on Clothing", clothingExtraComponentSrcUrlArray, onChangePart)}
             {partSection("Hat", hatsSrcUrlArray, onChangePart)}
             {partSection("Glasses", glassesSrcUrlArray, onChangePart)}
             {partSection("Neckwear", neckwearSrcUrlArray, onChangePart)}
