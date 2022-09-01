@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import PartList from './components/PartList';
 import Avatar from './components/Avatar';
-import { body } from './components/PartListBody';
-import { eyes } from './components/PartListEyes';
-import { eyebrows } from './components/PartListEyeBrows';
-import { mouths } from './components/PartListMouths';
-import { clothing1, clothing2, clothing3 } from './components/PartListClothes';
-import { glasses } from './components/PartListGlasses';
-import { hair } from './components/PartListHair';
-import { hats } from './components/PartListHats';
-import { neckwear } from './components/PartListNeckwear';
+import { body } from './configs/partListBody';
+import { eyes } from './configs/partListEyes';
+import { eyebrows } from './configs/partListEyeBrows';
+import { mouths } from './configs/partListMouths';
+import { clothing1, clothing2, clothing3 } from './configs/partListClothes';
+import { glasses } from './configs/partListGlasses';
+import { hair } from './configs/partListHair';
+import { hats } from './configs/partListHats';
+import { neckwear } from './configs/partListNeckwear';
 
 function App() {
   const [bodySrc, setBodySrc] = useState("");

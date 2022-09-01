@@ -1,13 +1,13 @@
 import React from 'react';
-import { body } from './PartListBody';
-import { clothing1, clothing2, clothing3 } from './PartListClothes';
-import { eyes } from './PartListEyes';
-import { hair } from './PartListHair';
-import { mouths } from './PartListMouths';
-import { eyebrows } from './PartListEyeBrows';
-import { hats } from './PartListHats';
-import { glasses } from './PartListGlasses';
-import { neckwear } from './PartListNeckwear';
+import { body } from '../configs/partListBody';
+import { clothing1, clothing2, clothing3 } from '../configs/partListClothes';
+import { eyes } from '../configs/partListEyes';
+import { hair } from '../configs/partListHair';
+import { mouths } from '../configs/partListMouths';
+import { eyebrows } from '../configs/partListEyeBrows';
+import { hats } from '../configs/partListHats';
+import { glasses } from '../configs/partListGlasses';
+import { neckwear } from '../configs/partListNeckwear';
 
 
 //create PartRender to use for PartList

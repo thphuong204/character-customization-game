@@ -1,5 +1,5 @@
 
-import { total } from './Total';
+import { total } from './total';
 
 const neckwear = [];
 
