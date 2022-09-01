@@ -83,7 +83,7 @@ function App() {
   return (
     <>
       <div id="title">
-        <div className="line1">Character
+        <div className="line1">Wearing Game
           <span></span>
         </div>
         <div className="line2">👗 👒 👜 🎀 Customization 🧢 👖 👔 👞 </div>
