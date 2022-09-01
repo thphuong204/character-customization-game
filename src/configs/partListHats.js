@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const hats = [];
+const hatsSrcUrlArray = [];
 
 const addHatItem = () => {
     for (let i = 1; i < total.hat + 1; i++) {
-        hats.push(`../images/accessories/hats/${i}.png`);
+        hatsSrcUrlArray.push(`../images/accessories/hats/${i}.png`);
     }
-    return hats;
+    return hatsSrcUrlArray;
 };
 
 addHatItem();
 
-export { hats };
+export { hatsSrcUrlArray };
 
 

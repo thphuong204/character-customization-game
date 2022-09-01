@@ -1,28 +1,28 @@
 import React from 'react';
-import { body } from '../configs/partListBody';
-import { clothing1, clothing2, clothing3 } from '../configs/partListClothes';
-import { eyes } from '../configs/partListEyes';
-import { hair } from '../configs/partListHair';
-import { mouths } from '../configs/partListMouths';
-import { eyebrows } from '../configs/partListEyeBrows';
-import { hats } from '../configs/partListHats';
-import { glasses } from '../configs/partListGlasses';
-import { neckwear } from '../configs/partListNeckwear';
+import { bodySrcUrlArray } from '../configs/partListBody';
+import { clothingInnerSrcUrlArray, clothingOuterSrcUrlArray, clothingExtraComponentSrcUrlArray } from '../configs/partListClothes';
+import { eyesSrcUrlArray } from '../configs/partListEyes';
+import { hairSrcUrlArray } from '../configs/partListHair';
+import { mouthsSrcUrlArray } from '../configs/partListMouths';
+import { eyebrowsSrcUrlArray } from '../configs/partListEyeBrows';
+import { hatsSrcUrlArray } from '../configs/partListHats';
+import { glassesSrcUrlArray } from '../configs/partListGlasses';
+import { neckwearSrcUrlArray } from '../configs/partListNeckwear';
 
 function PartList({ onChangePart }) {
     return (
         <div id="parts">
-            {partSection("Body", body, onChangePart)}
-            {partSection("Hair", hair, onChangePart)}
-            {partSection("Mouth", mouths, onChangePart)}
-            {partSection("Eyes", eyes, onChangePart)}
-            {partSection("Eyebrows", eyebrows, onChangePart)}
-            {partSection("Clothing 1", clothing1, onChangePart)}
-            {partSection("Clothing 2", clothing2, onChangePart)}
-            {partSection("Clothing 3", clothing3, onChangePart)}
-            {partSection("Hat", hats, onChangePart)}
-            {partSection("Glasses", glasses, onChangePart)}
-            {partSection("Neckwear", neckwear, onChangePart)}
+            {partSection("Body", bodySrcUrlArray, onChangePart)}
+            {partSection("Hair", hairSrcUrlArray, onChangePart)}
+            {partSection("Mouth", mouthsSrcUrlArray, onChangePart)}
+            {partSection("Eyes", eyesSrcUrlArray, onChangePart)}
+            {partSection("Eyebrows", eyebrowsSrcUrlArray, onChangePart)}
+            {partSection("Clothing 1", clothingInnerSrcUrlArray, onChangePart)}
+            {partSection("Clothing 2", clothingOuterSrcUrlArray, onChangePart)}
+            {partSection("Clothing 3", clothingExtraComponentSrcUrlArray, onChangePart)}
+            {partSection("Hat", hatsSrcUrlArray, onChangePart)}
+            {partSection("Glasses", glassesSrcUrlArray, onChangePart)}
+            {partSection("Neckwear", neckwearSrcUrlArray, onChangePart)}
         </div>
     )
 }

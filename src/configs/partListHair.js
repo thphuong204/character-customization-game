@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const hair = [];
+const hairSrcUrlArray = [];
 
 const addHairItem = () => {
     for (let i = 1; i < total.hair + 1; i++) {
-        hair.push(`../images/hair/${i}.png`);
+        hairSrcUrlArray.push(`../images/hair/${i}.png`);
     }
-    return hair;
+    return hairSrcUrlArray;
 };
 
 addHairItem();
 
-export { hair };
+export { hairSrcUrlArray };
 
 

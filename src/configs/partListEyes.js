@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const eyes = [];
+const eyesSrcUrlArray = [];
 
 const addEyesItem = () => {
     for (let i = 1; i < total.eyes + 1; i++) {
-        eyes.push(`../images/eyes/${i}.png`);
+        eyesSrcUrlArray.push(`../images/eyes/${i}.png`);
     }
-    return eyes;
+    return eyesSrcUrlArray;
 };
 
 addEyesItem();
 
-export { eyes };
+export { eyesSrcUrlArray };
 
 

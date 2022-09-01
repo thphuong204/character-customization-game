@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const neckwear = [];
+const neckwearSrcUrlArray = [];
 
 const addNeckwearItem = () => {
     for (let i = 1; i < total.neckwear + 1; i++) {
-        neckwear.push(`../images/accessories/neckwear/${i}.png`);
+        neckwearSrcUrlArray.push(`../images/accessories/neckwear/${i}.png`);
     }
-    return neckwear;
+    return neckwearSrcUrlArray;
 };
 
 addNeckwearItem();
 
-export { neckwear };
+export { neckwearSrcUrlArray };
 
 

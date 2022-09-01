@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const mouths = [];
+const mouthsSrcUrlArray = [];
 
 const addMouthItem = () => {
     for (let i = 1; i < total.mouth + 1; i++) {
-        mouths.push(`../images/mouths/${i}.png`);
+        mouthsSrcUrlArray.push(`../images/mouths/${i}.png`);
     }
-    return mouths;
+    return mouthsSrcUrlArray;
 };
 
 addMouthItem();
 
-export { mouths };
+export { mouthsSrcUrlArray };
 
 

@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import PartList from './components/PartList';
 import Avatar from './components/Avatar';
-import { body } from './configs/partListBody';
-import { eyes } from './configs/partListEyes';
-import { eyebrows } from './configs/partListEyeBrows';
-import { mouths } from './configs/partListMouths';
-import { clothing1, clothing2, clothing3 } from './configs/partListClothes';
-import { glasses } from './configs/partListGlasses';
-import { hair } from './configs/partListHair';
-import { hats } from './configs/partListHats';
-import { neckwear } from './configs/partListNeckwear';
+import { bodySrcUrlArray } from './configs/partListBody';
+import { eyesSrcUrlArray } from './configs/partListEyes';
+import { eyebrowsSrcUrlArray } from './configs/partListEyeBrows';
+import { mouthsSrcUrlArray } from './configs/partListMouths';
+import { clothingExtraComponentSrcUrlArray, clothingInnerSrcUrlArray, clothingOuterSrcUrlArray } from './configs/partListClothes';
+import { glassesSrcUrlArray } from './configs/partListGlasses';
+import { hairSrcUrlArray } from './configs/partListHair';
+import { hatsSrcUrlArray } from './configs/partListHats';
+import { neckwearSrcUrlArray } from './configs/partListNeckwear';
 
 function App() {
   const [bodySrc, setBodySrc] = useState("");
@@ -62,17 +62,17 @@ function App() {
   }
 
   const onRandomize = () => {
-    setBodySrc(body[Math.floor(Math.random() * body.length)])
-    setEyesSrc(eyes[Math.floor(Math.random() * eyes.length)])
-    setEyebrowsSrc(eyebrows[Math.floor(Math.random() * eyebrows.length)])
-    setMouthSrc(mouths[Math.floor(Math.random() * mouths.length)])
-    setClothes1Src(clothing1[Math.floor(Math.random() * clothing1.length)])
-    setClothes2Src(clothing2[Math.floor(Math.random() * clothing2.length)])
-    setClothes3Src(clothing3[Math.floor(Math.random() * clothing3.length)])
-    setGlassesSrc(glasses[Math.floor(Math.random() * glasses.length)])
-    setHairSrc(hair[Math.floor(Math.random() * hair.length)])
-    setHatSrc(hats[Math.floor(Math.random() * hats.length)])
-    setNeckwearSrc(neckwear[Math.floor(Math.random() * neckwear.length)])
+    setBodySrc(bodySrcUrlArray[Math.floor(Math.random() * bodySrcUrlArray.length)])
+    setEyesSrc(eyesSrcUrlArray[Math.floor(Math.random() * eyesSrcUrlArray.length)])
+    setEyebrowsSrc(eyebrowsSrcUrlArray[Math.floor(Math.random() * eyebrowsSrcUrlArray.length)])
+    setMouthSrc(mouthsSrcUrlArray[Math.floor(Math.random() * mouthsSrcUrlArray.length)])
+    setClothes1Src(clothingInnerSrcUrlArray[Math.floor(Math.random() * clothingInnerSrcUrlArray.length)])
+    setClothes2Src(clothingOuterSrcUrlArray[Math.floor(Math.random() * clothingOuterSrcUrlArray.length)])
+    setClothes3Src(clothingExtraComponentSrcUrlArray[Math.floor(Math.random() * clothingExtraComponentSrcUrlArray.length)])
+    setGlassesSrc(glassesSrcUrlArray[Math.floor(Math.random() * glassesSrcUrlArray.length)])
+    setHairSrc(hairSrcUrlArray[Math.floor(Math.random() * hairSrcUrlArray.length)])
+    setHatSrc(hatsSrcUrlArray[Math.floor(Math.random() * hatsSrcUrlArray.length)])
+    setNeckwearSrc(neckwearSrcUrlArray[Math.floor(Math.random() * neckwearSrcUrlArray.length)])
   }
 
   useEffect(() => {

@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const body = [];
+const bodySrcUrlArray = [];
 
 const addBodyItem = () => {
     for (let i = 1; i < total.body + 1; i++) {
-        body.push(`../images/body/${i}.png`);
+        bodySrcUrlArray.push(`../images/body/${i}.png`);
     }
-    return body;
+    return bodySrcUrlArray;
 };
 
 addBodyItem();
 
-export { body };
+export { bodySrcUrlArray };
 
 

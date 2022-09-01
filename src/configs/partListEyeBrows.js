@@ -1,17 +1,17 @@
 
 import { total } from './total';
 
-const eyebrows = [];
+const eyebrowsSrcUrlArray = [];
 
 const addEyebrowsItem = () => {
     for (let i = 1; i < total.eyebrows + 1; i++) {
-        eyebrows.push(`../images/eyebrows/${i}.png`);
+        eyebrowsSrcUrlArray.push(`../images/eyebrows/${i}.png`);
     }
-    return eyebrows;
+    return eyebrowsSrcUrlArray;
 };
 
 addEyebrowsItem();
 
-export { eyebrows };
+export { eyebrowsSrcUrlArray };
 
 
