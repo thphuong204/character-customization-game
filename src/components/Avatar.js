@@ -15,9 +15,9 @@ function Avatar({ bodySrc, eyesSrc, eyebrowsSrc, mouthSrc, clothes1Src, clothes2
                 <AvatarRender key="avtClothes2" avatarSrc={clothes2Src} style={{ zIndex: "3" }} />
                 <AvatarRender key="avtGlasses" avatarSrc={glassesSrc} style={{ zIndex: "3" }} />
                 <AvatarRender key="avtClothes3" avatarSrc={clothes3Src} style={{ zIndex: "4" }} />
+                <AvatarRender key="avtNeckwear" avatarSrc={neckwearSrc} style={{ zIndex: "5" }} />
                 <AvatarRender key="avtHair" avatarSrc={hairSrc} style={{ zIndex: "6" }} />
                 <AvatarRender key="avtHats" avatarSrc={hatSrc} style={{ zIndex: "7" }} />
-                <AvatarRender key="avtNeckwear" avatarSrc={neckwearSrc} style={{ zIndex: "5" }} />
             </div>
 
 
